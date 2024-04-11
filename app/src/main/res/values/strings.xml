@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">demoplui</string>
+    <string name="appTitleName">Payment Lounge Demo</string>
+    <string name="appVerison">Version 1.0.0</string>
+</resources>

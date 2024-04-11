@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:orientation="horizontal"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/appId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="100dp"
+            android:text="@string/appTitleName"
+            android:textAlignment="center" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="144dp"
+            android:contentDescription="@string/appTitleName"
+            android:paddingVertical="30dp"
+            android:src="@drawable/abclogo" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="155dp"
+            android:layout_marginEnd="173dp"
+            android:text="@string/appVerison" />
+
+        <EditText
+            android:id="@+id/enterMerchantID"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Enter Merchant ID"
+            android:inputType="text"
+            android:minHeight="48dp"
+            android:paddingHorizontal="30dp"
+            android:text="MRC7734" />
+
+        <EditText
+            android:id="@+id/enterOrderAmount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Enter Order Amount"
+            android:inputType="number"
+            android:minHeight="48dp"
+            android:paddingHorizontal="30dp"
+            android:text="" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/createOrder"
+                android:layout_width="134dp"
+                android:layout_height="48dp"
+                android:layout_margin="10dp"
+                android:text="Create Order" />
+
+            <Button
+                android:id="@+id/makePayment"
+                android:layout_width="150dp"
+                android:layout_height="48dp"
+                android:text="Make Payment" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/checkTransStatus"
+                android:layout_width="137dp"
+                android:layout_height="48dp"
+                android:layout_margin="10dp"
+                android:text="Check Status" />
+
+            <Button
+                android:id="@+id/resetButton"
+                android:layout_width="137dp"
+                android:layout_height="48dp"
+                android:text="Reset" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+        <TextView
+            android:id="@+id/orderDetails"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:paddingHorizontal="30dp"
+            android:text="Order Details"
+            android:textAlignment="center" />
+
+        <TextView
+            android:id="@+id/orderData"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="30dp"
+            android:paddingVertical="30dp"
+            android:scrollbars="vertical"
+            android:shadowColor="@color/black"
+            android:textAlignment="center" />
+
+    </LinearLayout>
+
+        <ProgressBar
+            android:id="@+id/idLoadingPB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            tools:ignore="MissingConstraints"
+            android:indeterminate="true"
+            android:minHeight="50dp"
+            android:minWidth="200dp"  />
+
+        <WebView
+            android:id="@+id/webView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
